@@ -57,9 +57,11 @@ packages:
   flutter_highlighted_text:
     dependency: "direct main"
     description:
-      path: "C:\\Users\\miso\\Documents\\CBH\\flutter_highlighted_text"
-      relative: false
-    source: path
+      path: "."
+      ref: main
+      resolved-ref: ca46b27bca30975c2f7aa093b38526bdc0783edc
+      url: "https://github.com/Miso-0/flutter_highlighted_text.git"
+    source: git
     version: "0.0.1"
   flutter_lints:
     dependency: "direct dev"

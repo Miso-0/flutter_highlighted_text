@@ -10,12 +10,15 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_highlighted_text:
-    path: ../flutter_highlighted_text
+    git:
+      url: https://github.com/Miso-0/flutter_highlighted_text.git
+      ref: main
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
+  
 
 flutter:
   uses-material-design: true
