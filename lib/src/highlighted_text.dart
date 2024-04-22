@@ -1,10 +1,10 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class HighlightedText extends Text {
   const HighlightedText(
     super.data, {
+    required this.patterns,
     super.key,
     super.maxLines,
     super.locale,
@@ -19,8 +19,7 @@ class HighlightedText extends Text {
     super.textHeightBehavior,
     super.textScaler,
     super.textWidthBasis,
-    required this.patterns,
-    required this.highLightStyle,
+    this.highLightStyle,
     this.onTap,
     this.caseSensitive = false,
     this.unicode = false,
@@ -29,7 +28,7 @@ class HighlightedText extends Text {
   });
 
   //Style the highlighted text
-  final TextStyle highLightStyle;
+  final TextStyle? highLightStyle;
 
   ///The list of texts to find in the given value
   final List<String> patterns;
@@ -80,7 +79,11 @@ class HighlightedText extends Text {
       result.add(
         TextSpan(
           text: t,
-          style: highLightStyle,
+          style: highLightStyle ??
+              const TextStyle(
+                color: Colors.red,
+                fontWeight: FontWeight.bold,
+              ),
           recognizer: TapGestureRecognizer()
             ..onTap = () {
               onTap?.call(t);

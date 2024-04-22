@@ -1,6 +1,7 @@
 name: flutter_highlighted_text
-description: "A new Flutter package project."
+description: "Flutter widget to find, highlight, and enable taps on specific text patterns."
 version: 0.0.1
+repository: https://github.com/Miso-0/flutter_highlighted_text
 
 environment:
   sdk: '>=3.3.3 <4.0.0'
@@ -21,5 +22,12 @@ platforms:
   macos:
   web:
   windows:
+
+topics:
+  - highlight
+  - text
+  - regular-expression
+  - search
+  - tap
 
 flutter:
